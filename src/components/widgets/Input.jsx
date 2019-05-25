@@ -9,10 +9,7 @@ const Input = styled.input`
   font-family: inherit;
   background-color: transparent;
   border-radius: ${({ theme }) => theme.radius};
-  border-width: 1px;
-  border-style: solid;
-  border-color: ${({ theme }) => theme.colors.textLight};
-  transition: ${({ theme }) => theme.transition} box-shadow;
+  border-width: 1px solid ${({ theme }) => theme.colors.textLight};
 
   ::placeholder {
     color: ${({ theme }) => theme.colors.textLight};
@@ -24,12 +21,16 @@ const Input = styled.input`
 
   &:focus {
     outline: none;
-    border-color: ${({ theme }) => theme.colors.blue};
-    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.blue};
+    border-color: ${({ theme }) => theme.colors.textDark};
   }
 
   &[type='textarea'] {
     resize: vertical;
+  }
+
+  &[type='button'] {
+    -webkit-appearance: button;
+    cursor: pointer;
   }
 
   ${props => props.customStyles}
