@@ -1,6 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import Helmet from 'react-helmet'
 
 import Container from '../widgets/Container'
 import CopyContainer from '../widgets/CopyContainer'
@@ -28,6 +29,13 @@ const AboutPage = ({ data }) => {
 
   return (
     <main>
+      <Helmet>
+        <title>About me - Techgenius by Austin Okhala</title>
+        <meta
+          name="description"
+          content="About me, contacts, lets connect on twitter @austoe6"
+        />
+      </Helmet>
       <Header>
         <Img
           style={{ height: 500, objectFit: 'cover' }}

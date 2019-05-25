@@ -1,6 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import Helmet from 'react-helmet'
 import { graphql, StaticQuery } from 'gatsby'
 
 import Container from '../widgets/Container'
@@ -60,6 +61,13 @@ export default () => (
 
       return (
         <main>
+          <Helmet>
+            <title>Blog - Techgenius by Austin Okhala</title>
+            <meta
+              name="description"
+              content="Ideas and insights about forex trading, trading bots, technology, etc"
+            />
+          </Helmet>
           <Header>
             <Img
               style={{ height: 500, objectFit: 'cover' }}
